@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {connect} from 'react-redux'
 import {useLocation, Link, withRouter} from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -7,6 +7,10 @@ import {setRule} from "../actions"
 
 
 function AppHeader(props) {
+
+  useEffect(() => {
+    props.history.push('/dashboard')
+  }, [])
 
   const addRule = async () => {
     await props.setRule({

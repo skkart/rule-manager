@@ -22,7 +22,7 @@ function App() {
         <ReactNotification />
         <AppHeader/>
         <Route exact={true} path="/" component={Dashboard}/>
-        <Route exact={true} path="/dashboard" component={Dashboard}/>
+        <Route exact path="/dashboard" component={Dashboard}/>
         <Route exact path="/add" component={RuleConfig}/>
         <Route exact path="/edit" component={RuleConfig}/>
       </div>
