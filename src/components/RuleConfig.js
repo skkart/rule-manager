@@ -78,6 +78,23 @@ function RuleConfig(props) {
       })
       return
     }
+
+    if (!criteriaList.length) {
+      // Atleast one criteria must exist
+      store.addNotification({
+        message: 'Atleast one criteria must exist to Preview!!!',
+        type: 'danger',
+        insert: 'top',
+        container: 'top-center',
+        animationIn: ['animated', 'fadeIn', 'jackInTheBox'],
+        animationOut: ['animated', 'fadeOut'],
+        dismiss: {
+          duration: 3000,
+          pauseOnHover: true
+        }
+      })
+      return
+    }
     setPreview(true)
   }
 
