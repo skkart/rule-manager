@@ -5,6 +5,7 @@ export const isRequired = (value) => {
   return ''
 }
 
+// This validator must take only words
 export const attributeValidator = (value) => {
   let val = isRequired(value)
   if (!val) {

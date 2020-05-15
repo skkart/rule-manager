@@ -8,6 +8,7 @@ export default function CriteriaJoin(props) {
     props.onChange(props.index, e.target.value)
   }
 
+  //In between every criteria we must add join operation (AND , OR) to pipe the criterias
   return (
     <div className="text-center m-5">
       <div className="input-group ml-4">

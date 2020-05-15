@@ -8,11 +8,13 @@ import {setRule} from "../actions"
 
 function AppHeader(props) {
 
+  // On Mount of App Header, Load Dashboard
   useEffect(() => {
     props.history.push('/dashboard')
   }, [])
 
   const addRule = async () => {
+    // FLush the stale state of formRule and pass empty rule
     await props.setRule({
       name: '',
       conditions: []
@@ -20,6 +22,7 @@ function AppHeader(props) {
     props.history.push('/add')
   }
 
+  // In case of ADD flow, Hide Add button on its route
   const location = useLocation()
   const urlPath = location.pathname
   return (

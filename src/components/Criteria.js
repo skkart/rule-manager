@@ -3,12 +3,14 @@ import {operators} from "../helpers/RuleConfiguration";
 import {attributeValidator, isRequired} from "../helpers/validators";
 
 export default function Criteria(props) {
+  // Create Form Obj to Watch on every user input
   const [form, setForm] = useState({
     key: props.rule.key,
     value: props.rule.value,
     opr: props.rule.opr,
   })
 
+  // Create Error Obj to validate on every user input
   const [formError, setFormError] = useState({
     key: '',
     value: '',
@@ -20,9 +22,6 @@ export default function Criteria(props) {
     switch (name) {
       case 'key':
         error = attributeValidator(value)
-        break
-      case 'value':
-        error = isRequired(value)
         break
       default:
         error = isRequired(value)
@@ -49,6 +48,7 @@ export default function Criteria(props) {
   }
 
   useEffect(() => {
+    // On mount of Every Criteria, Show validation upfront to user
     for (const prop in form) {
       validateError(prop, form[prop])
     }

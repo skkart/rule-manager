@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {FETCH_RULES, RESET_RULE, SET_RULE} from "./types"
+import {FETCH_RULES, SET_RULE} from "./types"
 import config from '../config'
 import {store} from 'react-notifications-component'
 
@@ -15,16 +15,12 @@ const fetchRuleList = async (dispatch) => {
   }
 }
 
-//Action creator
+//Action to Get list of Rules
 export const initRuleList = () => fetchRuleList
 
 // Action to Set Rule on Add or Edit
 export const setRule = (ruleObj) => async dispatch => {
   dispatch({ type: SET_RULE, payload: ruleObj })
-}
-
-export const resetRule = () => async dispatch => {
-  dispatch({ type: RESET_RULE, payload: null })
 }
 
 // Action to delete rule

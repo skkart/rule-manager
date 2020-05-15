@@ -12,7 +12,7 @@ code {
     monospace;
 }
 
-
+/* Counter for Showing Every criteria*/
 .ruleConfig {
     counter-reset: ruleCt;
 }

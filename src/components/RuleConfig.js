@@ -8,6 +8,16 @@ import {criteriaToString} from "../helpers/RuleConfiguration"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPlus} from '@fortawesome/free-solid-svg-icons'
 
+
+/*
+*
+* Every Rule has a name
+* &
+* List of criterias to form a conditions
+*
+* In between every criteria we can see join operation (AND , OR) to pipe the criterias
+*
+*/
 function RuleConfig(props) {
   const [criteriaList, setCriteriaList] = useState([])
   const [errorArr, setErrorArr] = useState([])
@@ -38,8 +48,10 @@ function RuleConfig(props) {
       })
       return
     }
+
+
     let newArr = []
-    // If Criterias exists, Add JOIN condition & Criteria together
+    // If Criterias exists, Add JOIN operation & Criteria together
     if (criteriaList.length > 0) {
       newArr.push({
         type: 'CriteriaJoin', toString() {
@@ -106,11 +118,14 @@ function RuleConfig(props) {
     }
     if (props.formRule.id) {
       // Edit Flow
+      // Edit the Rule & Reloads RuleList
       await props.editRule(ruleObj)
     } else {
       // Add Flow
+      // Add the Rule & Reloads RuleList
       await props.addRule(ruleObj)
     }
+    // Redirect to dashboard
     props.history.push('/dashboard')
   }
 

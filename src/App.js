@@ -1,19 +1,22 @@
 import React from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
-// Load Bootstrap for
+// Load Bootstrap for responsive UI
 import 'bootstrap/dist/js/bootstrap';
-//Load notification
+//Load notification for showing notification on error/success
 import ReactNotification from 'react-notifications-component';
 
+// Load Ext vendor CSS
 import 'bootstrap/dist/css/bootstrap.css';
-
-
 import 'react-notifications-component/dist/theme.css'
 
 import './App.css';
+
+// This is the Root page of Our APP
 import Dashboard from "./components/Dashboard";
-import RuleConfig from "./components/RuleConfig";
 import AppHeader from "./components/AppHeader";
+
+// For ADD/EDIT Rules
+import RuleConfig from "./components/RuleConfig";
 
 function App() {
   return (

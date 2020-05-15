@@ -1,4 +1,5 @@
 
+//List of all Allowed Operators
 export const operators = [
   {
     value: '>',
@@ -38,6 +39,8 @@ export const operators = [
   }
 ]
 
+
+// Show Criterias in a well format
 export const criteriaToString = (ctr) => {
   if (ctr.type === 'CriteriaJoin') {
     return ctr.join ? ` ${ctr.join} ` : ''

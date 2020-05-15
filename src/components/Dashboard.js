@@ -28,19 +28,23 @@ function Dashboard(props) {
     initRuleList()
   }, [])
 
+  // Show Condtions in user readable format
   const renderEquation = (cond) => (
     cond.map((ctr, i) => (<span key={i} className="m-1">{criteriaToString(ctr)}</span>))
   )
 
   const editRuleAction = (rl, i) => {
+    // Set the CLicked rule to formRule and open RuleConfig
     props.setRule(rl)
     props.history.push('/edit')
   }
 
   const deleteRuleAction = async (rl, i) => {
+    // Delete the Rule & Reloads RuleList
     await props.deleteRule(rl.id)
   }
 
+  // Render Table view for list of obtained Rules
   const loadRuleTable = () => (
     <div className="table-responsive-md mt-4">
       <table className="table table-info table-hover table-bordered">
