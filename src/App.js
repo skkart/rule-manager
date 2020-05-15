@@ -1,25 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
+import {BrowserRouter, Route} from 'react-router-dom';
+// Load Bootstrap for
+import 'bootstrap/dist/js/bootstrap';
+//Load notification
+import ReactNotification from 'react-notifications-component';
+
+import 'bootstrap/dist/css/bootstrap.css';
+
+
+import 'react-notifications-component/dist/theme.css'
+
 import './App.css';
+import Dashboard from "./components/Dashboard";
+import RuleConfig from "./components/RuleConfig";
+import AppHeader from "./components/AppHeader";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="container">
+        <ReactNotification />
+        <AppHeader/>
+        <Route exact={true} path="/" component={Dashboard}/>
+        <Route exact={true} path="/dashboard" component={Dashboard}/>
+        <Route exact path="/add" component={RuleConfig}/>
+        <Route exact path="/edit" component={RuleConfig}/>
+      </div>
+    </BrowserRouter>
   );
 }
 
