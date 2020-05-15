@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.64013910.chunk.css",
-    "main.js": "/static/js/main.08161e95.chunk.js",
-    "main.js.map": "/static/js/main.08161e95.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.b88d1d4c.js",
-    "runtime-main.js.map": "/static/js/runtime-main.b88d1d4c.js.map",
-    "static/css/2.1066f773.chunk.css": "/static/css/2.1066f773.chunk.css",
-    "static/js/2.2a476569.chunk.js": "/static/js/2.2a476569.chunk.js",
-    "static/js/2.2a476569.chunk.js.map": "/static/js/2.2a476569.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.9fd94cd986016ed4f7b363067c254854.js": "/precache-manifest.9fd94cd986016ed4f7b363067c254854.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.1066f773.chunk.css.map": "/static/css/2.1066f773.chunk.css.map",
-    "static/css/main.64013910.chunk.css.map": "/static/css/main.64013910.chunk.css.map",
-    "static/js/2.2a476569.chunk.js.LICENSE.txt": "/static/js/2.2a476569.chunk.js.LICENSE.txt"
+    "main.css": "rule-manager/static/css/main.64013910.chunk.css",
+    "main.js": "rule-manager/static/js/main.3c8a4e6c.chunk.js",
+    "main.js.map": "rule-manager/static/js/main.3c8a4e6c.chunk.js.map",
+    "runtime-main.js": "rule-manager/static/js/runtime-main.107244df.js",
+    "runtime-main.js.map": "rule-manager/static/js/runtime-main.107244df.js.map",
+    "static/css/2.1066f773.chunk.css": "rule-manager/static/css/2.1066f773.chunk.css",
+    "static/js/2.2a476569.chunk.js": "rule-manager/static/js/2.2a476569.chunk.js",
+    "static/js/2.2a476569.chunk.js.map": "rule-manager/static/js/2.2a476569.chunk.js.map",
+    "index.html": "rule-manager/index.html",
+    "precache-manifest.1980e94a346188b8b55906783b8f1d52.js": "rule-manager/precache-manifest.1980e94a346188b8b55906783b8f1d52.js",
+    "service-worker.js": "rule-manager/service-worker.js",
+    "static/css/2.1066f773.chunk.css.map": "rule-manager/static/css/2.1066f773.chunk.css.map",
+    "static/css/main.64013910.chunk.css.map": "rule-manager/static/css/main.64013910.chunk.css.map",
+    "static/js/2.2a476569.chunk.js.LICENSE.txt": "rule-manager/static/js/2.2a476569.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.b88d1d4c.js",
+    "static/js/runtime-main.107244df.js",
     "static/css/2.1066f773.chunk.css",
     "static/js/2.2a476569.chunk.js",
     "static/css/main.64013910.chunk.css",
-    "static/js/main.08161e95.chunk.js"
+    "static/js/main.3c8a4e6c.chunk.js"
   ]
 }
